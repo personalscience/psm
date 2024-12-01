@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+cp downloads/README.qmd README.md
+cp downloads/index.qmd .
+
+
+
+
+
+# rm -r "Projects"
+# rm -r _resources
+# joplin sync
+# joplin export .  --format md --notebook "PSM"
+# cp "Projects/Personal Science/PSM/index.md" index.qmd
+# # cp "Projects/Personal Science/PS-CGM/references.md" references.qmd
+# cp "Projects/Personal Science/PSM/README.md" .
+# # cp -r images Projects/Personal\ Science/PS-CGM 

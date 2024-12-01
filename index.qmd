@@ -1,7 +1,7 @@
 # Intro {#sec-intro}
 
 ::: {.callout-important}
-This is a draft copy, generated on 2024-11-30. Check back for regular updates
+This is a draft copy, generated on 2024-12-01. Check back for regular updates
 :::
 
 Science is the systematic and open-minded pursuit of truth through a never-ending process of systematic experimentation.  It's open to everyone and can be applied to any situation, including situations that affect you right now. It's _Personal Science_ when you use the scientific method to discover important insights about the wellness and performance of yourself and those around you. 

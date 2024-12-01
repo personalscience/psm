@@ -18,4 +18,12 @@ A working version of the docker container is at:
 Connect to the local directory that contains the source documents.
 
 
+```sh
+docker run --rm -v "$(pwd):/data" -w /data psm-quarto:latest
+```
+
+The final html document will be at
+
+file://docs/index.html
+
 

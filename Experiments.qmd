@@ -1,0 +1,130 @@
+---
+execute:
+  warning: false
+  echo: false
+  messages: false
+  
+---
+
+# My Experiments {#sec-experiments}
+
+Microbe numbers shift daily in response to your environment, so a single sample won't give much more than a brief snapshot at a single point in time. Here are some of the experiments I've tried on myself, in over 600 tests since 2014. What happens in your case?
+
+## Summary of My Experiments {#sec-experimentSummary}
+
+During the period from 2014 through early 2019, I sequenced over 600 samples of my microbiome. Inspired by the experiment in a 2014 paper by David Lawrence[^experiments-1], during most of that time I also carefully tracked the food I ate, my sleep, and other variables like activity or location. Most of my near-daily samples were of my gut, but I also regularly tested my skin, nose, and mouth. Since I'm generally healthy, I didn't have a specific goal in mind other than to try to understand better what these microbes are doing, so many of my tests were taken while undergoing simple experiments, like eating a specific type of food or visiting a new location. While not necessarily up to the rigorous standards of a formal scientific trial, these "n of 1" studies on myself helped me discover several new interesting facts about my own microbiome, many of which appear to contradict other published studies. In addition, hundreds of people sent me their own test results, letting me compare many different microbiomes. And of course, I also followed the latest developments in scientific publications and the general press as I eagerly tried to learn more.
+
+[^experiments-1]: @david_host_2014
+
+What follows is a brief overview of some of the key things I learned.
+
+-   The microbiome is highly variable from day to day, often moving in ways that appear indistinguishable from random.
+-   Broad trends *are* there if you look closely. I found many intriguing new results.
+-   It *is* possible to change your microbiome in specific circumstances.
+-   People's microbiomes are frustratingly different from one another. A feature that seems to be true about one person may not apply to another.
+
+### Diversity
+
+The general consensus is that diversity is good: a greater variety of microbes ensures more resilience against the daily threat of invaders. Many people, after taking just one test, often feel either reassured that their diversity is "good" or disappointed that it's "bad". But I find that day-to-day variability is high enough that it's almost never useful to use a single result. For example, here's my diversity during a typical week: (@fig-plotOneWeekDiversity))
+
+
+
+```{r}
+#| label: fig-plotOneWeekDiversity
+#| fig-cap: "Diversity changes significantly day-to-day."
+
+
+source("R/header.R")
+diversityWeek.gut.family <- subset_samples(sprague.family.norm, Date > "2017-03-15" & Date < "2017-03-27" & Site == "gut")
+data = data.frame(Diversity = estimate_richness(diversityWeek.gut.family, measures=c("Shannon")),
+                  Date = sample_data(diversityWeek.gut.family)$Date)
+ggplot(data,aes(x=Date,y=Shannon)) + geom_point() +
+  geom_smooth(formula = 'y~x', method = "loess") + 
+  scale_x_date(date_labels = "%d (%A)", date_breaks = "1 day", date_minor_breaks = "1 day") +
+  theme(axis.text.x = element_text(angle=90)) + 
+  theme(axis.title.x=element_blank()) +
+  labs(y = "Shannon Alpha Diversity Index", title = "Gut Diversity Changes Day-To-Day")
+```
+
+
+If Monday were my only test, I may have been disappointed with my 1.83 score. Wait another day or two and, with no significant changes in diet, I was up to 2.29 -- before plunging to 1.78 by the weekend. Moral: don't take a single result too seriously.
+
+To get a sense of how much diversity can vary over a year (@fig-plotOneYearDiversity))
+
+
+```{r}
+#| label: fig-plotOneYearDiversity
+#| fig-cap: "Gut diversity varies day-to-day but holds to a recognizable range within a single individual"
+
+diversityYear.gut.family <- subset_samples(gut.family.norm, Date > "2016-06-01" & Date < "2017-06-01")
+data = data.frame(Diversity = estimate_richness(diversityYear.gut.family, measures=c("Shannon")),
+                  Date = sample_data(diversityYear.gut.family)$Date)
+ggplot(data,aes(x=Date,y=Shannon)) + geom_point() +
+  geom_smooth(method = "loess") + 
+  theme(axis.title.x=element_blank()) +
+  scale_x_date(date_labels = "%B", date_breaks = "1 months", date_minor_breaks = "1 month")  +
+  theme(axis.text.x = element_text(angle=90)) + 
+  labs(y = "Shannon Alpha Diversity Index", title = "Gut Diversity Across One Year")
+  
+```
+
+
+{{< include Experiments/experiment_kefir.qmd >}}
+
+{{< include Experiments/experiment-kombucha.qmd >}}
+
+{{< include Experiments/experiment-travelChina.qmd >}}
+
+<!-- ```{r child="Experiments/experiment-travelMexico.Rmd"} -->
+
+<!-- ``` -->
+
+<!-- ```{r child="Experiments/experiment-travelChina.Rmd"} -->
+
+<!-- ``` -->
+
+<!-- ```{r child="Experiments/experiment-camping.Rmd"} -->
+
+<!-- ``` -->
+
+<!-- ```{r child="Experiments/experiment-activity.Rmd"} -->
+
+<!-- # Does my microbiome change depending on how much exercise I get? -->
+
+<!-- ``` -->
+
+
+{{< include Experiments/experiment-probiotics.qmd >}}
+
+{{< include Experiments/experiment-colon.qmd >}}
+
+
+<!-- {{< include Experiments/experiment_akkermansia.qmd >}} -->
+
+{{< include Experiments/experiment-sleep.qmd >}}
+
+
+
+
+{{< include Experiments/experiment-dentist.qmd >}}
+
+
+{{< include Experiments/experiment-sniffle.qmd >}}
+
+{{< include Experiments/experiment-food.qmd >}}
+
+
+{{< include Experiments/experiment-methods.qmd >}}
+
+
+
+
+## Conclusions
+
+Are these results are meaningful enough to be worthy of further analysis? How representative were these samples of my microbiome at the time? I submitted only a tiny sample to the lab; are the bacteria distributed evenly enough that the size or location of the sample doesn't matter? Would I get similar results if I submitted two tests from slightly different sites on the same sample?
+
+The answers to all these questions are unclear, but while we need to take these concerns seriously, my experience over many samples is that the results are consistent enough that, yes, the conclusions are actionable as long as we keep the limitations in mind. Here's why I think so:
+
+First, my results are consistent with other "healthy omnivore" submissions that uBiome has received from others with diets and health histories similar to mine. I would be concerned if, for example, my firmicutes/bacteroidetes ratio were reversed.
+
+Second, 16S technology has proven accuracy when identifying unique organisms, so I can generally trust information about the overall level of diversity regardless of specific proportions. Since diversity tends to correlate with health -- and is manipulable based on what I eat -- my own experience shows that the changes I see in these results go up and down consistently in the expected way. Even if specific points on my microbiome map are fuzzy, the overall landmarks appear to be solid.
