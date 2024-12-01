@@ -1,0 +1,34 @@
+project:
+  type: book
+  output-dir: _book
+
+  preview:
+    port: 4200
+
+metadata-files:
+  - _book.yml
+  - _website.yml
+
+execute:
+  freeze: true
+
+
+
+bibliography: psm-refs.bib
+extract-media: "assets/images"
+license: "MIT"
+
+
+
+format:
+  html:
+    theme: litera
+    css: css/normalize.css
+    toc: true
+    code-fold: false
+  epub:
+    cover-image: assets/coverPersonalScience-quarto.jpg
+
+
+
+

@@ -1,0 +1,28 @@
+---
+execute:
+  cache: true
+  warning: false
+  echo: false
+  messages: false
+  
+---
+
+# My Tests {#sec-tests}
+
+Microbe numbers shift daily in response to your environment, so a single sample won't give much more than a brief snapshot at a single point in time. But in over 600 tests under a variety of conditions, what did I find?
+
+```{r}
+
+
+
+source("R/header.R")
+
+```
+
+{{< include myTests/microbesInMouth.qmd >}}
+
+{{< include myTests/microbesInNose.qmd >}}
+
+{{< include myTests/microbesInSkin.qmd >}}
+
+{{< include myTests/experiment-other.qmd >}}

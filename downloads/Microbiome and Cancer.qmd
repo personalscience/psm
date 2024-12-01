@@ -1,0 +1,20 @@
+
+## Cancer
+
+
+### A microbiome-based cancer diagnostic
+
+An all-star team from the highly-regarded Rob Knight lab at UCSD published in *Nature* (2020) a ground-breaking study that showed how cancer could be diagnosed through microbiome testing.^[@poore_microbiome_2020,  later retracted], but a team of Johns-Hopkins statisticians [@gihawi_major_2023] showed that there were several errors in the study.  Knight's team did a [reanalysis](https://github.com/gregpoore/tcga_rebuttal/tree/master) and claims that a later replication indicates that an association exists whether it's those particular microbes involved or not.^[see [*Science* 2-Aug-2023](https://www.science.org/content/article/major-errors-alleged-landmark-study-used-microbes-identify-cancers)]
+
+
+### Targeting microbiota in cancer
+
+
+see April 2022 [Targeting the gut and tumor microbiota in cancer](https://www.nature.com/articles/s41591-022-01779-2)
+
+Park, E.M., Chelvanambi, M., Bhutiani, N. et al. Targeting the gut and tumor microbiota in cancer. Nat Med 28, 690–703 (2022). https://doi.org/10.1038/s41591-022-01779-2
+
+ Eric Topol [summary](https://erictopol.substack.com/p/how-to-upend-cancer-screening?utm_source=substack&utm_medium=email)  ([Evernote](https://www.evernote.com/shard/s7/nl/748304/10a69540-50ac-45fc-9046-15d807105351?title=How%20to%20Upend%20Cancer%20Screening%20-%20by%20Eric%20Topol))
+
+![Microbes by cancer type](https://onedrive.live.com/embed?resid=8BC6084B92FFA451%21684420&authkey=%21AOJyLz7DMNcm5n0&width=830&height=1818?no.jpg)
+

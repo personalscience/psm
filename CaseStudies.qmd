@@ -1,0 +1,49 @@
+---
+execute:
+  cache: true
+  warning: false
+  echo: false
+  messages: false
+  
+---
+
+# Case Studies {#caseStudies}
+
+
+Hundreds of people have sent me their microbiome results. Here are some examples showing how I walk through specific cases. 
+
+```{r}
+#| label: fig-caseStudyOverview
+#| fig-cap: "A selection of case studies"
+#| echo: false
+
+
+source("R/header.R")
+
+```
+
+
+
+{{< include CaseStudies/caseStudyHealthy.qmd >}}
+
+{{< include CaseStudies/FatherAndSon.qmd >}}
+
+{{< include CaseStudies/alzheimers-disease.qmd >}}
+
+{{< include CaseStudies/colorectalCancer.qmd >}}
+
+
+{{< include CaseStudies/caseStudyKeto.qmd >}}
+
+
+{{< include CaseStudies/caseStudyParkinsons.qmd >}}
+
+{{< include CaseStudies/autismCaseStudy.qmd >}}
+
+{{< include CaseStudies/caseStudyExercise.qmd >}}
+
+{{< include CaseStudies/caseStudyLyme.qmd >}}
+
+<!-- {{< include CaseStudies/caseStudyGutIssues.qmd >}}
+ -->
+

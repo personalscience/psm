@@ -1,0 +1,72 @@
+project:
+  type: book
+  output-dir: docs
+  preview:
+      port: 4200
+
+execute:
+  cache: true
+  freeze: auto
+
+book:
+  title: "Personal Science Guide to the Microbiome"
+  site-url: "https://psm.personalscience.com"
+  google-analytics: G-4RNWXLMEJR
+  author: Richard Sprague
+  date: last-modified
+  cover-image: assets/coverPersonalScience-quarto.jpg
+  output-file: psm
+  downloads: [epub, pdf, docx]
+  page-footer: "Copyright © Richard Sprague 2024"
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - part: "General Overview"
+      chapters:
+        - intro.qmd
+        - "downloads/What is Personal Science.qmd"
+    - part: "Science"
+      chapters:
+        - science.qmd
+        - "Science/microbesEverywhere.qmd"
+        - "downloads/Microbes and You.qmd"
+        - Science/microbes_in_you.qmd
+        - Science/microbes-and-health.qmd  # includes
+    - part: "Technology"
+      chapters:
+        - methods.qmd
+        - "downloads/Handling microbiome data.qmd"
+    - part: "Do It Yourself"
+      chapters:
+        # - "Experiments/microbes_to_watch.qmd"
+        - "downloads/Microbes to Watch.qmd"
+        - Experiments.qmd
+        - myTests.qmd
+        - CaseStudies.qmd
+        - "downloads/DIY Microbiome Testing.qmd"
+    - part: "Next Steps"
+      chapters:
+        - "downloads/Beyond Bacteria.qmd"
+        - "downloads/Microbes and Genes.qmd"
+        - Next/references-books.qmd
+        - Next/references-academic.qmd
+        - references.qmd
+    - Appendix.qmd
+
+bibliography: 
+  - psm-refs.bib
+
+format:
+  html:
+    theme: litera
+    code-fold: true
+    toc: true
+    css: css/normalize.css
+    df-print: paged
+    cover-image: assets/coverPersonalScience-quarto.jpg
+  pdf:
+    documentclass: scrreprt
+    title: Personal Science Guide to the Microbiome
+  epub:
+    css: css/middleman.css
+

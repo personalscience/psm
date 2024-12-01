@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: PSM Process",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/psm_process.py",
+            "args": ["PSM"],
+            "console": "integratedTerminal",
+            "postDebugTask": "notes-to-psm"
+        },
+        
+    ]
+}

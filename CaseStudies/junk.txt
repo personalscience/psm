@@ -1,0 +1,28 @@
+Square root transformation
+Wisconsin double standardization
+Run 0 stress 0.209237 
+Run 1 stress 0.2187721 
+Run 2 stress 0.2225866 
+Run 3 stress 0.2229507 
+Run 4 stress 0.2188493 
+Run 5 stress 0.2165391 
+Run 6 stress 0.2255439 
+Run 7 stress 0.2134196 
+Run 8 stress 0.2227996 
+Run 9 stress 0.2136028 
+Run 10 stress 0.2097233 
+... Procrustes: rmse 0.0100098  max resid 0.07134873 
+Run 11 stress 0.2158708 
+Run 12 stress 0.2192419 
+Run 13 stress 0.2147819 
+Run 14 stress 0.2219069 
+Run 15 stress 0.2316011 
+Run 16 stress 0.221556 
+Run 17 stress 0.2147361 
+Run 18 stress 0.2092837 
+... Procrustes: rmse 0.004808528  max resid 0.05958045 
+Run 19 stress 0.2159803 
+Run 20 stress 0.2164184 
+*** No convergence -- monoMDS stopping criteria:
+    11: no. of iterations >= maxit
+     9: stress ratio > sratmax

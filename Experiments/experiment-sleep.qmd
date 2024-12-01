@@ -1,0 +1,155 @@
+## Hacking my sleep {#experimentSleep}
+
+Most people know about the hormone melatonin and that it has something to do with sleep. Some international travelers take it to counter the effects of jet lag, and some people take it regularly as a treatment for insomnia.  You might vaguely remember that it has something to do with the pineal gland, a small organ tucked near your brain, but did you know that your gut contains *400 times*^[@chen_distribution_2011 or https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198018/] more melatonin?  Something like 80% of its precursors, as well as those of the similar mood-regulating neurotransmitter serotonin are made in the gut^[@cryan_mind-altering_2012 and see the excellent @blaser_missing_2015 for more intriguing details.]
+
+There are other reasons to suspect that sleep and the gut may be linked. Think of all those home remedies for insomnia: a glass of warm milk before bed, apple cider vinegar, non-caffeinated herbal teas -- many of these are foods known to affect the microbiome. 
+
+A quick internet search for "gut microbe serotonin" will lead you to _Bifidobacterium infantis_ [which modulates tryptophan](http://www.pnas.org/content/108/7/3047.long), the stuff in turkey that urban legends have long (and incorrectly) blamed for [that sleepy feeling](http://www.webmd.com/food-recipes/features/the-truth-about-tryptophan) you get after Thanksgiving dinner. If you can raise the level of _B. infantis_, might it also improve sleep?
+
+To understand how to grow these microbiobes, it helps to understand something about the bacterium itself. Fortunately, it's a well-studied organism, first identified back in 1899 as a common inhabitant of the intestines of breast-fed infants. Nowadays you can buy prebiotics that contain lots of bifido – or so they claim. Without rigorous lab independent verification of the claims, it can be hard to tell if the prebiotic form is helpful or not (and frankly, [I'm skeptical](#experimentProbiotics))
+
+Bifido is highly sensitive to oxygen, and flourishes best in environments like the colon that are anaerobic. It's also a strong fermenter of certain types of starches, called resistant starch, so-called because they resist digestion.
+
+One of the best resistant starches is plain old potato starch, made by finely grinding tubers into a light, white powder. You can buy an organic version from *Bob's Red Mill* at most natural foods stores or high-end supermarkets. It's cheap, and tasteless, so it's often used in cooking, as a thickener for sauces.
+
+
+```{r experimentSleepBobRedMillGraphic, fig.cap="No fiber in here."}
+
+knitr::include_graphics(file.path(here::here(),"Experiments","assets","experimentSleepBobsRedMillFront.jpg"))
+```
+
+
+The nutrition label on potato starch shows that it is essentially inert as a food. No calories, vitamins, or minerals, no fat, and not even any fiber. It's just zero on everything, because it passes right through the stomach. When cooked, it becomes a thick, gooey consistency that quickly is absorbed by powerful stomach acids, but if kept in its raw state, it slides right through into the colon.
+
+Not many other foods make it this far undigested, so a rich unfermented wad of fresh potato starch is a real treat for the Bifido of the colon and they quickly begin to make the most of it, fermenting it into the precursors to tryptophan. At least, that's the theory.
+
+Does it work?  To find out, I started with two tablespoons the first day: just mix it in a glass of water (or other cold liquid^[you might try cocoa, which one study found significantly increases *Bifidobacterium* abundance: @tzounis_prebiotic_2011 ([full text](https://academic.oup.com/ajcn/article/93/1/62/4597700#112962129))] and drink it, preferably in the afternoon to give it plenty of time to make it to the colon and start feeding the microbes. On the second day I raised it to three tablespoons and kept it there for the following days. Anything larger might risk unpleasant gas or loose stools until my body adjusts. Within two nights it was obvious that something was working. I couldn't believe my excellent sleep!
+
+After a few days, the sleep effect started to wear off, though I still felt much-improved. But could I trace the improvement to improved levels of Bifido? I continued to take potato starch randomly off and on for the next several months, measuring my sleep each night. What did the data say?
+
+```{r}
+#| label: fig-sleepExperimentSleepBifidoChart
+#| fig-cap: "Potato Starch, Sleep, and Bifidobacterium levels."
+
+experiment_days <- rikStats %>% dplyr::filter(Date < "2015-04-10") %>%
+  dplyr::filter(!is.na(`Potato Starch`) & !is.na(Z)) %>%
+  select(Date,PS = `Potato Starch`, Z, REM, Alcohol, Deep, `Vitamin D`) %>%
+    dplyr::group_by(Week = cut(Date, "1 week")) %>%
+  dplyr::mutate(Date = as.Date(Date),# MeanZ = mean(Z, na.rm = TRUE),
+         `Potato Starch` = cut(PS,breaks = c(0,.2,2,8), include.lowest = TRUE, labels =c("None", "Low", "High")),
+         REM = as.numeric(REM) * 24,
+         Deep = as.numeric(Deep) * 24) 
+
+
+bifido <- mhg_taxa(subset_samples(sprague.genus.norm,Site == "gut" &
+                           Date > as.Date("2014-5-15") &
+                           Date < as.Date("2015-05-01")),
+         "Bifidobacterium") %>% mutate(Date = date, bifido = abundance/10000) %>%
+  select(Date,bifido)
+
+# insert one new row (not in my current uBiome Explorer results for some reason, but for which I have JSON data)
+# bifido <- rbind(bifido,
+#   c("2015-01-19",bifido = as.numeric(6.6516)))
+
+#bifido$bifido <- as.numeric(bifido$bifido)
+j <- dplyr::full_join(bifido, experiment_days) %>% as_tibble()
+j[is.na(j$`Potato Starch`),]$`Potato Starch` <- "None"
+
+ggplot(data = j  ) +
+  geom_point(aes(x=as.Date(Date),y=Z, color = `Potato Starch`)) +
+  geom_smooth(inherit.aes = FALSE, data = j %>% dplyr::filter(`Potato Starch` %in% c("Low","None")),
+              aes(x=as.Date(Date),y=Z, color = `Potato Starch`),
+              method = "lm", se = FALSE) +
+  geom_bar( data = j, stat = "identity", aes(x = as.Date(Date), y = bifido),
+           color = "black") +
+                 scale_y_continuous(sec.axis = sec_axis(~.,
+                                                        name = "Bifidobacterium (%)")) +
+    scale_x_date(date_labels = "%b", date_breaks = "1 month", date_minor_breaks = "2 weeks") +
+  xlim(as.Date("2014-10-04"),as.Date("2015-04-01")) +
+  labs(title = "Total Sleep Per Night", x = "")
+```
+
+As you can see, there is almost no difference in the total sleep I enjoyed on nights following my eating a tablespoon or two of potato starch. I studied the data carefully, looking for possible ways the potato starch may have had an effect, but couldn't find proof that it worked^[You can see the detailed code on [my blog](https://richardsprague.com/post/2019/02/09/reevaluating_sleep_experiments/)]. It's worth noting that the sleep times (Z) in my data are calculated with a Zeo sleep tracking device which I wore strapped on my forehead to detect the subtle changes in electrical activity that come with sleep. Zeo let me calculate precise REM and Deep sleep numbers as well, but none of them seemed to be affected by potato starch.^[I tried correlating with other variables too, such as alcohol but found no effect. I *did* find a small effect during the days after taking Vitamin D supplements, but it barely met the bar for statistical significance. If there's an effect, it's not very strong.]
+
+Unfortunately, when I ran this experiment I only received three microbiome results. The first came shortly after beginning to ingest large amounts of potato starch so I don't have a good "before" test. However, I *do* have one result taken after I had stopped the potato starch for several weeks. Both samples taken when consuming potato starch have much higher levels of _Bifidobacterium_ than normal. 
+
+What _is_ normal for me? Here's how I look during a typical three month period. (@fig-experimentSleepBifidoLevels)
+
+```{r}
+#| label: fig-experimentSleepBifidoLevels
+#| fig-cap: "Bifido abundance over time. Red dots are days for which there is a sample. Blue line is the medium value for healthy people. Orange is the average sleep per night for each week."
+
+people_healthy <- subset_samples(people.gut.norm,Condition == "Healthy")
+
+bifido_healthy_median <- mhg_taxa(people_healthy, "Bifidobacterium") %>% pull(abundance) %>% median()/10000
+
+d <- mhg_taxa(gut.norm.nodupes, "Bifidobacterium") %>% 
+  dplyr::filter(date > as.Date("2017-4-01") & date < as.Date("2017-06-01")) %>% mutate(abundance = abundance /10000) %>% 
+    group_by(Week = cut(date, "1 week")) %>% 
+  mutate(Mean = mean(abundance, na.rm = TRUE)) %>% select(Week, date, Mean, abundance)
+
+
+df <- rikStats %>% dplyr::filter(Date > as.Date("2017-4-01") & Date < as.Date("2017-06-01")) %>% select(date = Date, Z) %>% dplyr::left_join(d) %>%
+    group_by(Week = cut(date, "1 week")) %>% 
+  dplyr::mutate(MeanZ = mean(Z)) %>% select(Week, date,Z, MeanZ, Mean, abundance)
+
+iro <- c("Weekly Ave Sleep Per Night"="orange","Long-term healthy"="blue","BAR"="#62c76b")
+
+ggplot(data=df, aes(x = date, y = abundance)) + geom_bar(stat = "identity") +
+ # geom_line(aes(x = date, y = Mean), color = "green") + 
+  geom_line(aes(x = date, y = MeanZ/3, color = "Weekly Ave Sleep Per Night"),  stat = "identity") + 
+                 scale_y_continuous(sec.axis = sec_axis(~.*3,
+                                                        name = "Sleep (Weekly Mean)")) +
+  geom_point(aes(x = date, y = 0), color = "red") + 
+  geom_hline(yintercept = bifido_healthy_median, show.legend = TRUE) +
+  scale_x_date(date_labels = "%b",
+                date_breaks = "1 month", date_minor_breaks = "2 weeks") +
+  labs(title = "Bifidobacterium", x = "Date", y = "Abundance (%)") + theme(axis.title.x = element_blank()) + 
+  theme(legend.title=element_blank(), legend.text=element_text(size=9))
+```
+
+Note that I have some *Bifidobacterium* in just about every sample (the red dots), but it doesn't look like there's a strong relationship with sleep. My daily average sleep (indicated in orange, averaged across the week) seems pretty constant, though the *Bifidobacterium* levels flucuate wildly.
+
+Since describing my experiments, many people have contacted me to say they've tried the potato starch trick too with various levels of success. One person for whom it worked extremely well suggested from his own testing that the *amount* is critical. My 3-4 tablespoons per day was counterproductive, he said. The melatonin producers supposedly get swamped by that much food, so it's better to give them a much tinier amount.
+
+Unless you test daily, it's hard to see subtle patterns in microbiome samples, and my original experiments weren't frequent enough to tell why (or whether) the _Bifidobacterium_ is changing. So, taking my friend's advice, I tried some smaller amounts of potato starch. How do those look?
+
+```{r}
+#| label: fig-experimentSleepPS
+#| fig-cap: "No apparent relationship between small amounts (1-2 tsp) of raw potato starch and Bifidobacterium abundance"
+
+#sample_data(gut.norm)$Notes %>% stringr::str_detect("starch")
+
+Firmicutes <- subset_taxa(subset_samples(sprague.phylum.norm, Site == "gut"), Phylum %in% c("Firmicutes","Bacteroidetes"))
+
+fb <- mhg_abundance(subset_samples(Firmicutes, Date > "2017-03-15" & Date < "2017-04-15"))/10000 
+fb <- fb["Firmicutes",]/fb["Bacteroidetes",] # 
+fb <- fb %>% gather(Date,Ratio)
+fb$Date <- as.Date(fb$Date)
+
+ps_dates <- rikfood %>% dplyr::filter(stringr::str_detect(Name, "potato starch")) %>% select(Date,Name) %>% pull(Date)
+  
+  #sample_data(subset_samples(gut.norm,  stringr::str_detect(Notes,"starch") ))[,c("Date","SSR","Label")] %>% pull(Date)
+iro <- c("Firmicutes/Bacteroidetes Ratio"="orange","LINE2"="#3591d1","BAR"="#62c76b")
+
+mhg_taxa(gut.norm, "Bifidobacterium") %>% dplyr::filter(date > "2017-03-15" & date < "2017-04-15") %>% ggplot(aes(x=date,y=abundance/10000)) +  geom_point(aes(x = date, y = 0), color = "red") + 
+  geom_bar(stat = "identity") + geom_vline(xintercept = ps_dates, color = "blue") +
+  geom_point(data = rikStats %>% dplyr::filter(Date > "2017-03-15" & Date < "2017-04-15") %>% mutate(date = Date),
+             aes(x = date, y = Z-3), color = "brown") +
+ geom_line(data=fb %>% gather(Date,Ratio),aes(x=Date,y=Ratio, color = "Firmicutes/Bacteroidetes Ratio")) +
+  scale_y_continuous(sec.axis = sec_axis(~.+3,name = "Sleep (hrs)")) +
+  scale_colour_manual(name="Ratios",values=iro) + scale_fill_manual(name="Sleep",values=iro) +
+  labs(title = "Potato Starch and Bifidobacterium", subtitle = "(Blue lines are days I took some potato starch)", y = "Bifidobacterium (%)") +   theme(axis.title.y.right = element_text(color = "brown"), axis.text.y.right = element_text(color = "brown")) + theme(legend.title=element_blank(), legend.text=element_text(size=9))
+
+```
+
+Here it's more obvious that any potato starch had little to do with the rise and fall of my gut _Bifidobacteria_. So why were the percentages so much smaller in this experiment than in the higher 6+% numbers I found while doing my original, more rigorous sleep measuring test above? Maybe it's the tinier amounts? We'll have to test again to understand for sure.
+
+An interdisciplinary team of scientists says resistant starch can change the ratio of Firmicutes to Bacteroidetes^[see @maier_impact_2017 [full text](https://mbio.asm.org/content/8/5/e01343-17
+)]. I calculated the ratio for my own testing and found some interesting, often dramatic rises a day or two after taking the potato starch. (@fig-experimentSleepPS)
+
+Conclusion: There's a possibility that, in high enough amounts, potato starch increases my _Bifidobacterium_ levels. Whether it increased microbes associated with melatonin production is less clear, but it's hard to show that the potato starch caused a noticable change in my sleep.
+
+
+
+

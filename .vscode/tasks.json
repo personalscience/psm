@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+
+        {
+            "label": "notes-to-psm",
+            "type": "shell",
+            "command": "./fromjoplin && quarto render && open docs/index.html",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

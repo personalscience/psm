@@ -1,0 +1,5 @@
+## Obesity {#sec-obesity}
+
+Obese and diabetic people are subject to more infections than healthy people, but interestingly it's not the body mass index that drives this, but rather the accompanying hyperglycemia.[^microbes-and-health-17]
+
+[^microbes-and-health-17]:  @thaiss_microbiome_2018

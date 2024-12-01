@@ -1,0 +1,6 @@
+# References
+
+<!-- {{< include Next/references-books.qmd >}} -->
+
+::: {#refs}
+:::

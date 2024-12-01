@@ -1,0 +1,43 @@
+
+Jeff Lapides and others from Drexel find [Evidence supportive of a bacterial component](https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2023.1123228/full)
+
+> We detected bacteria in the brains of both cohorts with the principal bacteria comprising Cutibacterium acnes (formerly Propionibacterium acnes) and two species each of Acinetobacter and Comamonas genera. 
+
+> The AD-related pathogenicity of the brain microbiome seems to be based on a complex polymicrobial dynamic. The time ordering revealed a rise and fall of the abundance of C. acnes with pathogenicity occurring for an off-peak abundance level in association with at least one other bacterium from a set of genera that included Methylobacterium, Bacillus, Caulobacter, Delftia, and Variovorax. C. acnes may also be involved with outcompeting the Comamonas species, which were strongly associated with non-demented brain microbiota, whose early destruction could be the first stage of disease. Our results are also consistent with a leaky blood–brain barrier or lymphatic network that allows bacteria, viruses, fungi, or other pathogens to enter the brain.
+
+	
+
+
+## Parkinsons Disease
+
+See Jun 2022 [Review: Gut Microbiota: A Novel Therapeutic Target for Parkinson’s Disease](https://www.frontiersin.org/articles/10.3389/fimmu.2022.937555/full#B56)
+
+Parkinson's disease (PD) is a neurodegenerative disorder that is the second-most common after Alzheimer's disease. Here is a general overview of PD and its known demographic factors:
+
+1. Age of Detection:
+   - Most people diagnosed with PD are age 60 years or older^[https://www.ninds.nih.gov/current-research/focus-disorders/focus-parkinsons-disease-research/parkinsons-disease-challenges-progress-and-promise].
+   - However, an estimated 5 to 10 percent of people with PD are diagnosed before the age of 50^[https://www.parkinson.org/understanding-parkinsons/statistics].
+   - The overall incidence of PD increases with age^[https://academic.oup.com/aje/article/157/11/1015/151509].
+   - The incidence of PD in persons ages 65 and older ranges from 108 to 212 per 100,000^[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865395/].
+
+2. Sex:
+   - Men are 1.5 times more likely to have Parkinson's disease than women.
+   - The male-to-female ratio of PD may change with age, suggesting that the etiology of PD may vary across different age groups^[https://jnnp.bmj.com/content/87/9/952].
+
+3. Geography:
+   - The prevalence and incidence of PD can vary by geographic location.
+   - A study in North America found that the age-sex-adjusted incidence of PD ranged from 108 to 212 per 100,000 among persons ages 65 and older^[https://www.nature.com/articles/s41531-022-00410-y].
+   - Geographic and ethnic variations in PD have been observed, but further research is needed to understand the underlying factors.
+
+It's important to note that these demographic factors are based on available research and may not capture the full complexity of PD. The understanding of PD is constantly evolving, and further research is needed to uncover additional factors that may contribute to the development and progression of the disease.
+
+Later I'll describe my own Personal Science observations about the [link with Parkinsons](#sec-caseStudyParkinsons)
+
+***
+
+Also see [the link with trichloroethylene (TCE)](https://scitechdaily.com/scientists-warn-common-cleaning-chemical-linked-to-500-increased-risk-of-parkinsons-disease/?expand_article=1), used to decaffeinate coffee, degrease metal, and dry clean clothes
+
+
+## Other conditions
+
+[Some people](https://lactobacto.com/sinusitis-treatment-summary/) claim you can treat migraine headaches, sinusitus, and other conditions by inserting *Lactobacillus*-containing Kimchi up the nostril. I've not tried it and can't vouch for it, but let me know if it works for you.

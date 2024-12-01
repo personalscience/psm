@@ -1,0 +1,34 @@
+Living microbes are found everywhere on earth, often in surprising places. This section looks at some examples of how ubiquitous and hardy they can be, both in nature and on our bodies. We'll also discuss the technologies used to study the human microbiome.
+
+# Microbes Everywhere
+
+The most important parts of our world are invisible. We can't see air, but we can't live without it. Similarly, our bodies are literally bathed in living, eating, reproducing lifeforms that we can't see but that have profound effects on all that we do.
+
+Life is tenacious, finding its niche, fighting for it, and stubbornly holding on in every environment it encounters. Living organisms inhabit the sky, deep underground, in the most barren habitats cold or hot anywhere on earth. The vast majority of these are microbes, so small we can't see them, but small doesn't mean irrelevant. In fact, the more that science understands about the invisible microbial world, the more it becomes clear that these uncountably numerous creatures exert a much bigger effect than we think.
+
+Every traditional culture recognizes a role for the invisible, often translated with words like "spirit" or "life force", sometimes with more expressive terms like "angels", "demons", "gods" or even, simply, "God". It's tempting to dismiss these invisible forces as so much superstition, as though truth is made only of things we can see, but of course that's not quite true either. With the right instruments, we *can* see many invisible things; some of the greatest discoveries happen when a new gadget like a microscope or telescope makes people aware of a world that was previously hidden.
+
+The invisible world of microbes is like that, with new, low-cost technologies showing us an incredible, rich, living universes of over 1 trillion species^[Nobody knows for sure, but perhaps the latest, best estimate is @locey_scaling_2016] waiting to be explored. 
+
+The word "microbe" refers to any tiny organism that carries its own genetic information for purposes of propagating itself. Far too small to see with the naked eye, dozens could fit inside a typical human cell. Although it's common to think of microbes synonymously with bacteria, in fact there are at least seven different types of microorganism:
+
+* bacteria
+* archaea: extremophile life forms that live and thrive in environments too challenging for bacteria
+* protozoa
+* algae 
+* fungi
+* viruses
+* a few multi-cellular animal parasites such as helminths.
+
+Each of these has its own characteristic body type, means of reproduction, ways of moving around, and a deep, long history that is far older than humans.
+
+Let's look next at some of these environments and see the odd places where microbes have been found.
+
+
+{{< include "/Science/microbesAboveAndBelow.qmd" >}}
+
+
+
+{{< include /Science/microbesAroundYou.qmd >}}
+
+

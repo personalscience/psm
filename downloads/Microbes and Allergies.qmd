@@ -1,0 +1,29 @@
+
+
+## Food Allergies {#sec-allergies}
+
+If you attended elementary school before the 1980s, you can remember a time before nut allergies, when school lunches served peanut butter to everyone without the slightest worry that it might cause problems. Now many schools are forced to strictly limit the allowable kinds of food in their cafeterias, even from kids who bring their own lunches. Besides nuts, people suffer from allergies to milk, corn, eggs, fish, shellfish, soy, wheat, and many others.
+
+Oddly, the very existence of food allergies appears to be an entirely modern problem. Medical journals didn't even mention food allergies until 1969, and examples were extremely rare before that. In fact, the very first mention of a food allergy happened about 100 years ago.[^microbes-and-health-5]. Human genetics hasn't changed suddenly in the past half-century, and given the variety of conditions, it seems unlikely that we can blame it on a single toxin or industrial pollutant.
+
+[^microbes-and-health-5]: as mentioned in @spector_diet_2016 referring to Golbert, T.M., J Allergy (Aug 1969); 44(2): 96--107. *Systemic allergic reactions to ingested antigens* and Schloss, O., Arch Paed (1912); 29: 219. *A case of food allergy*
+
+Several intriguing clues point in the direction of microbes as the cause of allergies. One theory, known as the "hygiene hypothesis", says that our modern environments are too sterile, that the immune systems of growing children need to be challenged by threatening invaders from time to time or they become overly sensitive. Now another idea, the "old friends" hypothesis suggests that it's not the hygienic conditions and lack of microbes *per se* that drive the autoimmune response, but rather it's that our bodies have evolved, over untold generations, to *expect* microbes in the environment, some nasty and some friendly, and when the developing immune system of a child is never exposed to these microbes, a breakdown occurs that misrecognizes certain foods as enemies instead.
+
+Rutgers University scientist Martin Blaser [@blaser_missing_2015] thinks something odd has happened because of the overuse of antibiotics. There are plenty of people in Western societies who suffer far fewer food allergies, people like the Old Order Amish of Pennsylvania, who for centuries have kept to traditional ways of farming and who live in communities largely unaffected by industrialization. Their significantly greater time spent outdoors, challenged regularly by animal and soil microbial pathogens has made them far less likely to suffer from allergies than the rest of the population. Studies of Amish gut microbiomes show strikingly different profiles, generally with higher diversity and numerous microbes rarely found in urban people[^microbes-and-health-6].
+
+[^microbes-and-health-6]: @zupancic_analysis_2012
+
+Asthma, another terrible condition likely sparked by an incorrect balance between hygiene and microbes, points to better times ahead, its numbers of sufferers having peaked in the 1990s and 2000s. In fact, "We have probably seen the worst of the asthma epidemic"[^microbes-and-health-7] writes scientist Tim Spector, who suggests childhood asthma has been replaced by food allergies.
+
+[^microbes-and-health-7]:  @spector_diet_2016
+
+The good news is that, armed with our understanding of the relationship between microbes and allergies, new discoveries may offer treatments or even cures.
+
+Evidence showing that *Clostridia* may counter sensitivity to peanuts [^microbes-and-health-8] has led to additional research behind the source of the problem. Now a new drug, Palforzia, is an FDA-approved treatment option for peanut allegies that works by exposing young children to small doses of the key microbe-stimulating compound in peanuts, letting immature immune systems develop a safer relationship with peanuts. Similar studies are underway for other allergies, lending hope that someday food allergies may once again fade into the background and disappear as they did 100 years ago.
+
+[^microbes-and-health-8]: <http://www.sciencemag.org/news/2014/08/gut-microbe-stops-food-allergies>
+
+Cathryn Nagler's lab has identified *Anaerostipes caccae* as a key microbe that protects against allergic reactions.[^microbes-and-health-9]
+
+[^microbes-and-health-9]:  @feehley_healthy_2019 (download the full text here: <https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/1480/files/2019/07/Feehleyetal.pdf>)

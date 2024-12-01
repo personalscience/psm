@@ -1,0 +1,22 @@
+website:
+  title: "Personal Science Guide to the Microbiome"
+  google-analytics: G-4RNWXLMEJR
+  favicon: assets/favicon.ico
+  reader-mode: true
+  open-graph: true
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Intro"
+        contents:
+        - index.qmd
+        - 01-intro.qmd
+        - science.qmd
+      - section: "Microbes"
+        contents:
+        - 02-microbes.qmd
+        - 03-methods.qmd
+      - section: "References"
+        contents:
+        - 06-references.qmd
