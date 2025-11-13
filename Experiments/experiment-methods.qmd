@@ -188,7 +188,9 @@ ggplot(data=p0.ratios %>% gather(Part,Value,-Sample) %>% arrange(Value), aes(x=r
 
 Let's run the same correlation calculation that uBiome used:
 
-```{r measureSampleLin, echo = FALSE}
+```{r measureSampleLin}
+#| echo: false
+
 library(DescTools)
 #DescTools::CCC(p0.ratios$Part1,p0.ratios$Part2)[["rho.c"]][,"est"]
 

@@ -1,7 +1,7 @@
 # Intro {#sec-intro}
 
 ::: {.callout-important}
-This is a draft copy, generated on 2024-12-01. Check back for regular updates
+This is a draft copy, generated on 2025-11-13. Check back for regular updates
 :::
 
 Science is the systematic and open-minded pursuit of truth through a never-ending process of systematic experimentation.  It's open to everyone and can be applied to any situation, including situations that affect you right now. It's _Personal Science_ when you use the scientific method to discover important insights about the wellness and performance of yourself and those around you. 
@@ -10,17 +10,17 @@ This book will introduce you to one exciting area of personal science: understan
 
 
 
-<div>
-<hr>
+::: {.stay-in-touch}
+---
 
-<h3> Stay in touch </h3>
-<p>For weekly updates</p>
+### Stay in touch
+
+For weekly updates
 
 <iframe src="https://personalscience.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
-
-<hr>
-</div>
+---
+:::
 
 
 
