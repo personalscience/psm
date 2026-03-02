@@ -18,11 +18,12 @@ done
 # --- Strip non-HTML entries from sitemap ---
 SITEMAP="$OUTPUT_DIR/sitemap.xml"
 if [ -f "$SITEMAP" ]; then
-  # Remove <url> blocks containing .pdf, .epub, or .docx links
-  sed '/<url>/{
-    N; N;
-    /\.\(pdf\|epub\|docx\)/d
-  }' "$SITEMAP" > "${SITEMAP}.tmp" && mv "${SITEMAP}.tmp" "$SITEMAP"
+  python3 -c "
+import re, sys
+xml = open('$SITEMAP').read()
+xml = re.sub(r'\s*<url>\s*<loc>[^<]*\.(pdf|epub|docx)</loc>.*?</url>', '', xml, flags=re.DOTALL)
+open('$SITEMAP', 'w').write(xml)
+"
 fi
 
 # --- LLMs.txt files ---
