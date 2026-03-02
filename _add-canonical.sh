@@ -28,3 +28,9 @@ fi
 # --- LLMs.txt files ---
 cp llms.txt "$OUTPUT_DIR/llms.txt" 2>/dev/null || true
 python3 _build-llms-full.py 2>/dev/null || true
+
+# --- Add llms.txt to sitemap ---
+if [ -f "$SITEMAP" ]; then
+  DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ" 2>/dev/null || date -Iseconds)
+  sed "s|</urlset>|  <url>\n    <loc>${SITE_URL}/llms.txt</loc>\n    <lastmod>${DATE}</lastmod>\n  </url>\n</urlset>|" "$SITEMAP" > "${SITEMAP}.tmp" && mv "${SITEMAP}.tmp" "$SITEMAP"
+fi
