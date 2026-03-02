@@ -1,0 +1,33 @@
+# Personal Science Guide to the Microbiome
+
+> A practical guide to understanding your microbiome through personal science — covering gut bacteria, 16S rRNA sequencing, self-experiments, and what the latest research means for your health. Written by Richard Sprague, based on 600+ personal microbiome samples collected over several years.
+
+This online book introduces readers to the human microbiome from a personal science perspective. It covers the biology of gut bacteria, the technology behind 16S rRNA gene sequencing, hands-on self-experiments, and practical advice for interpreting your own microbiome test results. The author shares findings from years of near-daily sampling of his own gut, skin, nose, and mouth microbiomes, along with analysis of hundreds of samples from other people.
+
+## Chapters
+
+- [Introduction](https://psm.personalscience.com/): Overview of personal science and the microbiome book
+- [Getting Started](https://psm.personalscience.com/intro.html): How to begin with personal science and microbiome self-testing
+- [What is Personal Science?](https://psm.personalscience.com/downloads/What%20is%20Personal%20Science.html): The philosophy and practice of using the scientific method on yourself
+- [The Science of the Microbiome](https://psm.personalscience.com/science.html): Introduction to microbiome biology — what microbes are and how they work
+- [Microbes Everywhere](https://psm.personalscience.com/Science/microbesEverywhere.html): How ubiquitous and hardy microbes are, both in nature and on our bodies
+- [Microbes and You](https://psm.personalscience.com/downloads/Microbes%20and%20You.html): The relationship between your genes, your microbiome, and genetic testing
+- [Microbes In You](https://psm.personalscience.com/Science/microbes_in_you.html): Microbes and disease — from Pasteur's germ theory to modern understanding
+- [Microbes and Health](https://psm.personalscience.com/Science/microbes-and-health.html): Links between microbiome and allergies, obesity, and hygiene
+- [Methods](https://psm.personalscience.com/methods.html): How 16S rRNA gene sequencing works and how microbiome data is generated
+- [Handling Microbiome Data](https://psm.personalscience.com/downloads/Handling%20microbiome%20data.html): Practical guide to interpreting microbiome test results and abundance data
+- [Microbes to Watch](https://psm.personalscience.com/downloads/Microbes%20to%20Watch.html): Key bacterial species in the gut and what they do
+- [My Experiments](https://psm.personalscience.com/Experiments.html): Results from 600+ self-experiments on diet, travel, and lifestyle effects
+- [My Tests](https://psm.personalscience.com/myTests.html): Testing results from mouth, nose, skin, and gut microbiomes
+- [Case Studies](https://psm.personalscience.com/CaseStudies.html): Real-world microbiome analysis from hundreds of people
+- [DIY Microbiome Testing](https://psm.personalscience.com/downloads/DIY%20Microbiome%20Testing.html): Guide to consumer microbiome testing services and how to choose one
+- [Beyond Bacteria](https://psm.personalscience.com/downloads/Beyond%20Bacteria.html): Viruses, fungi, and other non-bacterial microbes in the human microbiome
+- [Microbes and Genes](https://psm.personalscience.com/downloads/Microbes%20and%20Genes.html): How your human genes affect which microbes you host
+- [Recommended Books](https://psm.personalscience.com/Next/references-books.html): Ranked list of the best books about the microbiome
+- [Academic Papers](https://psm.personalscience.com/Next/references-academic.html): Essential academic papers for understanding microbiome science
+- [References](https://psm.personalscience.com/references.html): Full bibliography
+
+## Optional
+
+- [Appendix](https://psm.personalscience.com/Appendix.html): Additional content being incorporated into other chapters
+- [Full content](https://psm.personalscience.com/llms-full.txt): Complete text of all chapters for detailed analysis
