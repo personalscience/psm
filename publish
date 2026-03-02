@@ -1,0 +1,3 @@
+#!/bin/bash
+# Publish docs/ to S3, served via CloudFront at psm.personalscience.com
+aws s3 sync docs/ s3://psm.personalscience.com/ --delete
