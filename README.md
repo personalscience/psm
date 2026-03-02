@@ -28,4 +28,18 @@ After you run that Docker command the final html document will be at
 
 file://docs/index.html
 
+To render only HTML (skipping PDF/EPUB):
 
+```sh
+docker run --rm -v "$(pwd):/data" -w /data psm-quarto:latest quarto render --to html
+```
+
+## Publish
+
+The site is hosted on S3 + CloudFront at [psm.personalscience.com](https://psm.personalscience.com). To publish after rendering:
+
+```sh
+./publish
+```
+
+This syncs `docs/` to `s3://psm.personalscience.com/`. Requires AWS CLI configured with appropriate credentials. CloudFront cache typically refreshes within 24 hours.
