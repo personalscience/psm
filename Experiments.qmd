@@ -1,9 +1,10 @@
 ---
+description: "Results from 600+ microbiome self-experiments — how diet, travel, and lifestyle shift your gut bacteria day to day."
 execute:
   warning: false
   echo: false
   messages: false
-  
+
 ---
 
 # My Experiments {#sec-experiments}

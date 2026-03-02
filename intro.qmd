@@ -1,3 +1,7 @@
+---
+description: "How to get started with personal science and microbiome self-testing, inspired by Seth Roberts and based on 600+ gut samples."
+---
+
 # Getting Started {#sec-start}
 
 

@@ -1,10 +1,11 @@
 ---
+description: "Real-world microbiome case studies — analyzing gut test results from hundreds of people to find patterns and insights."
 execute:
   cache: true
   warning: false
   echo: false
   messages: false
-  
+
 ---
 
 # Case Studies {#caseStudies}

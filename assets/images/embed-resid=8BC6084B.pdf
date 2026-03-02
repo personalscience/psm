@@ -1,0 +1,42 @@
+
+
+
+<style>
+    a.skyd_embd_lnk
+    {
+        color:#0066a7;
+        text-decoration:none;
+        font-size:0.9em;
+        display:block;
+        margin-top:30px;
+        text-align:center;
+    }
+    a.skyd_embd_lnk:hover
+    {
+        text-decoration:underline;
+    }
+    body.skyd_embd_bdy
+    {
+        padding:0;
+        margin:0;
+        overflow:hidden;
+        background-color:#ffffff;
+        font-family:verdana,arial,sans-serif;
+    }
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html style="overflow:hidden;" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Microsoft OneDrive</title>
+    
+
+<!-- ODSP-ODWEB-ODCF 0.0.0.0 en-US -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+
+<body class="skyd_embd_bdy">        
+    <div style="position:absolute;height:98%;width:98.5%;border:1px solid #dde5e9;">
+        <a class="skyd_embd_lnk" href="https://go.microsoft.com/fwlink/?LinkId=92546" target="_blank">This item won't load right now.</a>
+    </div>
+</body>
+</html>

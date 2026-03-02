@@ -1,4 +1,8 @@
-# The Science of the Microbiome {#sec-science} 
+---
+description: "An introduction to microbiome biology — what microbes are, how they work, and why they matter for human health."
+---
+
+# The Science of the Microbiome {#sec-science}
 
 
 

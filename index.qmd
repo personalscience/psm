@@ -1,7 +1,41 @@
+---
+title: "Personal Science Guide to the Microbiome"
+description: "A practical guide to understanding your microbiome through personal science — covering gut bacteria, 16S testing, self-experiments, and what the latest research means for your health."
+---
+
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Personal Science Guide to the Microbiome",
+  "author": {
+    "@type": "Person",
+    "name": "Richard Sprague"
+  },
+  "url": "https://psm.personalscience.com/",
+  "image": "https://psm.personalscience.com/assets/coverPersonalScience-quarto.jpg",
+  "description": "A practical guide to understanding your microbiome through personal science — covering gut bacteria, 16S testing, self-experiments, and what the latest research means for your health.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Personal Science"
+  },
+  "bookFormat": "https://schema.org/EBook",
+  "about": [
+    {"@type": "Thing", "name": "Microbiome"},
+    {"@type": "Thing", "name": "Gut bacteria"},
+    {"@type": "Thing", "name": "16S rRNA sequencing"},
+    {"@type": "Thing", "name": "Personal science"}
+  ]
+}
+</script>
+```
+
 # Intro {#sec-intro}
 
 ::: {.callout-important}
-This is a draft copy, generated on 2025-11-13. Check back for regular updates
+This is a draft copy, generated on 2026-03-01. Check back for regular updates
 :::
 
 Science is the systematic and open-minded pursuit of truth through a never-ending process of systematic experimentation.  It's open to everyone and can be applied to any situation, including situations that affect you right now. It's _Personal Science_ when you use the scientific method to discover important insights about the wellness and performance of yourself and those around you. 

@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: docs
+  post-render:
+    - ./_add-canonical.sh
   preview:
       port: 4200
 
@@ -10,7 +12,15 @@ execute:
 
 book:
   title: "Personal Science Guide to the Microbiome"
+  description: "A practical guide to understanding your microbiome through personal science — covering gut bacteria, 16S testing, self-experiments, and what the latest research means for your health."
   site-url: "https://psm.personalscience.com"
+  open-graph:
+    image: assets/coverPersonalScience-quarto.jpg
+    description: "A practical guide to understanding your microbiome through personal science."
+  twitter-card:
+    card-style: summary_large_image
+    image: assets/coverPersonalScience-quarto.jpg
+    description: "A practical guide to understanding your microbiome through personal science."
   google-analytics: G-4RNWXLMEJR
   author: Richard Sprague
   date: last-modified
